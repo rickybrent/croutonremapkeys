@@ -1,0 +1,9 @@
+devices:
+- input_name: 'AT Translated Set 2 keyboard'
+  input_phys: 'isa0060/serio0/input0'
+  output_name: 'AT Translated Set 2 keyboard'
+  remappings:
+    KEY_CONTROLPANEL:
+    - KEY_CONTROLPANEL
+    KEY_ASSISTANT:
+    - KEY_ASSISTANT
