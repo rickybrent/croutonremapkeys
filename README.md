@@ -5,14 +5,14 @@ A quick wrapper for using [evdevremapkeys](https://github.com/philipl/evdevremap
 
 The Pixelbook contains an extra KEY_ASSISTANT key between left control and alt, where many keyboards have a Windows/Super key, as well as a KEY_CONTROLPANEL at the top  right. X has a keycode limit of 255, far less than the 583 and 579 values our keys have. Meanwhile, remapping them in one of the usual methods loses their function in Chrome OS.
 
-Hence this script: we use Philip Langdale's excellent [evdevremapkeys](https://github.com/philipl/evdevremapkeys) daemon as a module and swap  between two key remapping configurations depending on if Chrome OS or a 
+Hence this script: we use Philip Langdale's excellent [evdevremapkeys](https://github.com/philipl/evdevremapkeys) daemon as a module and swap  between two key remapping configurations depending on if Chrome OS or a
 (non-xiwi) X11 window is active, allowing us to use the Assistant and top-right Control Panel key in both environments.
 
 By default, KEY_ASSISTANT is mapped to KEY_COMPOSE/Menu, chosen since it's often set to Hyper and Super is unavailable due to being Search.
 KEY_CONTROLPANEL is mapped to KP_DOT/KP_Delete, since recent thinkpad keyboards have delete in that spot, and no numpad means it's certainly free.
 
 ## How to use
-Install the requirements, then run it as root before X11 grabs the keyboard. 
+Install the requirements, then run it as root before X11 grabs the keyboard. Alternately, run the [installation script](https://github.com/rickybrent/croutonremapkeys/blob/master/install.sh).
 
 ## Requirements
 
